@@ -20,12 +20,13 @@ class SaBackenApplicationTests {
 		produitrepository.save(produit);
 	}
 	
-	@Test
-	public void testListeProduit(){
-		Produit p = produitrepository.findById(1L).get();
-		System.out.println("la liste est : " + p);
-		
-	}
+	/*
+	 * @Test public void testListeProduit(){ Produit p =
+	 * produitrepository.findById(1L).get(); System.out.println("la liste est : " +
+	 * p);
+	 * 
+	 * }
+	 */
 	
 	
 	

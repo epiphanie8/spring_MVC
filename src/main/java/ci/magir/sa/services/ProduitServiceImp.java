@@ -1,6 +1,7 @@
 package ci.magir.sa.services;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,19 +34,18 @@ public class ProduitServiceImp implements ProduitService{
 	}
 
 	@Override
-	public void deleteByProduit(Long id) {
+	public void deleteProduitById(Long id) {
 		produitrepository.deleteById(id);
 		
 	}
 
 	@Override
-	public ArrayList<Produit> getProduit() {
-		return (ArrayList<Produit>) produitrepository.findAll();
-	
+	public List<Produit> getAllProduit() {
+		return produitrepository.findAll();
 	}
 
 	@Override
-	public Produit getAllProduit(Long id) {
+	public Produit getProduit(Long id) {
 		return produitrepository.findById(id).get();
 	}
 
